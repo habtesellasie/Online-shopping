@@ -1,0 +1,1016 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;800&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Chewy&family=Creepster&family=Gloria+Hallelujah&family=Patrick+Hand&display=swap");
+
+/* 
+
+  font-family: 'Allerta Stencil', sans-serif;
+  font-family: 'Chewy', sans-serif;
+  font-family: 'Gloria Hallelujah', sans-serif;
+  font-family: 'Patrick Hand', sans-serif;
+  popup
+
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.1s cubic-bezier(0.175, 0.885, 0.32, 0.7);
+}
+
+*::selection {
+  background-color: var(--polish);
+  color: var(--gray);
+}
+
+:root {
+  --black: #211f1f;
+  --acsent: rgb(67, 151, 181);
+  --white: rgb(243, 243, 243);
+  --gray: rgb(85, 85, 85);
+  --polish: rgb(233, 199, 171, 0.7);
+  --hero-clr: rgb(23, 23, 23);
+
+  --foreground: var(--black);
+  --background: var(--white);
+}
+
+.darkmode {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background: var(--black);
+  color: var(--white);
+}
+
+header {
+  padding-bottom: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+nav {
+  position: fixed;
+  width: 88%;
+  border-bottom: solid var(--polish) 2px;
+  background-color: rgba(33, 33, 33, 0.9);
+  backdrop-filter: blur(10px);
+  z-index: 99;
+  transition: all 0.3s ease-in;
+}
+
+.ul-el,
+.ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 5px;
+}
+
+.ul-el {
+  gap: 0;
+}
+
+.ul-el li a,
+.ul-el a,
+.ul-el li {
+  text-decoration: none;
+  color: var(--white);
+  list-style: none;
+}
+.ul-el > a {
+  margin-right: auto;
+  font-family: "Allerta Stencil";
+  color: var(--acsent);
+  transition: all 0.3s ease-in;
+}
+
+.ul-el li a {
+  text-shadow: 0 0 10px var(--white);
+}
+
+.ul-el li {
+  padding: 2px 5px;
+  border: solid 1.5px var(--gray);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.null {
+  pointer-events: none;
+  user-select: none;
+  border: none;
+  outline: none;
+  visibility: hidden;
+}
+
+.burger {
+  width: 32px;
+  height: 32px;
+  position: fixed;
+  z-index: 99;
+  top: 0.6rem;
+  right: 3rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.bar {
+  background-color: var(--acsent);
+  width: 90%;
+  height: 3px;
+  border-radius: 25px;
+}
+
+.ul-el .cart-count {
+  border: none;
+  margin: 0;
+  position: relative;
+}
+.counting-logo {
+  cursor: pointer;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* change bellow */
+  background-color: rgb(51, 162, 226);
+  border-radius: 10px;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 5px 5px;
+}
+
+.counting {
+  position: fixed;
+  top: 4px;
+  right: -1px;
+  border: none;
+  outline: none;
+  color: red;
+  font-size: 15px;
+  font-weight: 500;
+  z-index: 999;
+  background-color: rgb(51, 162, 226);
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+/* apear on scroll down only */
+.scroll-down nav {
+  transform: translate3d(0, -100%, 0);
+}
+
+.scroll-up nav {
+  filter: drop-shadow(0 -10px 20px rgb(170, 170, 170));
+}
+
+/* header ends here */
+
+.popup {
+  display: none;
+  position: absolute;
+  top: 5rem;
+  right: -0.6rem;
+  min-width: 250px;
+}
+
+.cart-count {
+  border: solid;
+}
+
+.popup-container {
+  background: url("exclamation-mark.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--black);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 20px;
+  border-radius: 15px;
+  width: 350px;
+  box-shadow: 0 0 10px var(--white);
+}
+
+.popup-handler {
+  backdrop-filter: blur(5px);
+  text-shadow: 0 0 10px var(--black);
+}
+
+.popup-handler .btn-close {
+  position: absolute;
+  right: -2rem;
+  top: -1.7rem;
+  border: solid 1px var(--acsent);
+  border-radius: 50px;
+  background-color: var(--polish);
+  color: rgb(165, 5, 5);
+  padding: 5px 10px;
+  cursor: pointer;
+  filter: drop-shadow(0px 0px 6px var(--white));
+}
+
+.btn-clear {
+  position: absolute;
+  right: 1.2rem;
+  bottom: 0.5rem;
+  border: solid 2px var(--acsent);
+  border-radius: 5px;
+  background-color: var(--white);
+  color: rgb(165, 5, 5);
+  padding: 5px;
+  cursor: pointer;
+  filter: drop-shadow(0px 0px 6px var(--black));
+}
+
+.popup.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup h3 {
+  font-family: "Patrick Hand", sans-serif;
+  border: solid var(--acsent) 2.3px;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.popup p {
+  font-family: "Gloria Hallelujah", sans-serif;
+  font-weight: bolder;
+  padding: 5px 10px;
+  border-bottom: solid;
+  min-width: 300px;
+  max-width: 350px;
+}
+
+main {
+  width: 88%;
+  margin: 0 auto;
+}
+
+#home {
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.row {
+  position: relative;
+}
+
+.cool-hang {
+  background-image: url("online-shopping1.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-bottom: solid var(--polish) 3.5px;
+  margin-bottom: 2rem;
+}
+
+.cool-hang::after {
+  content: "";
+  width: 4px;
+  height: 20px;
+  background-color: var(--white);
+  position: absolute;
+  top: -4.5px;
+  left: -6.5px;
+  z-index: 98;
+}
+
+.cool-hang::before {
+  content: "";
+  width: 25px;
+  height: 4px;
+  background-color: var(--white);
+  position: absolute;
+  top: -1px;
+  left: -9px;
+  z-index: 98;
+}
+
+.brand {
+  font-size: 4rem;
+  color: var(--acsent);
+  font-family: "Allerta Stencil", sans-serif;
+  text-shadow: 0 0 10px var(--acsent);
+  margin-left: 7rem;
+  transition: all 0.1s ease-in-out;
+}
+
+/* fading */
+.span {
+  opacity: 0;
+  transition: all 0.1s cubic-bezier(0.68, -0.55, 0.265, 2);
+  transform: translateY(100px);
+  /* display: inline-block; */
+  filter: blur(50px);
+}
+
+.span.fade {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: all 2s cubic-bezier(0.68, -0.55, 0.265, 0.5);
+  filter: blur(0);
+}
+/* fading ends here */
+
+.welcome-first {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.intro {
+  font-size: 26px;
+  text-align: left;
+  transition: all 0.3s ease-in;
+  margin-bottom: 2rem;
+  position: relative;
+  font-family: "Allerta Stencil", sans-serif;
+}
+
+.intro::after {
+  content: "";
+  width: 4px;
+  height: 20px;
+  background-color: var(--white);
+  position: absolute;
+  bottom: -4px;
+  left: -5px;
+}
+
+.intro::before {
+  content: "";
+  width: 25px;
+  height: 4px;
+  background-color: var(--white);
+  position: absolute;
+  bottom: -1px;
+  left: -9px;
+}
+
+.row {
+  flex: 2 1 0;
+}
+
+.home-img {
+  width: 45%;
+  flex: 2 1 0;
+  border-radius: 15px;
+}
+
+.welcome-first .parag {
+  flex: 2 1 0;
+
+  letter-spacing: 2.2px;
+  font-family: "Patrick Hand", sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  gap: 25px;
+  padding: 1rem 0;
+}
+
+.welcome-second,
+.welcome-third,
+.welcome-fourth,
+.welcome-fifth {
+  flex: 2 2 0;
+  max-width: 518px;
+  min-width: 200px;
+  margin: 0 auto;
+  border-radius: 15px;
+  padding: 20px;
+  border: solid 1px var(--acsent);
+}
+
+.welcome-second h3,
+.welcome-third h3,
+.welcome-fourth h3,
+.welcome-fifth h3 {
+  border-bottom: solid 3px var(--polish);
+  margin-bottom: 10px;
+}
+
+.shopping-header {
+  text-align: center;
+  color: var(--acsent);
+}
+
+.holder {
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  position: relative;
+}
+
+.home-hero {
+  border-radius: 15px;
+  width: 250px;
+  padding: 20px;
+  background: linear-gradient(180deg, var(--black) 50%, var(--acsent));
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 0 10px var(--gray);
+  flex: 1 1 0;
+  min-width: 170px;
+}
+
+/* .home-hero:hover {
+  box-shadow: 0 0 10px var(--acsent);
+  scale: 1.03;
+} */
+
+.home-hero:hover::before .welcome:hover {
+  scale: 1.03;
+  box-shadow: 0 0 10px var(--polish);
+}
+
+.product-desc {
+  font-size: 12px;
+  text-align: center;
+  font-family: "Allerta Stencil", sans-serif;
+  font-weight: 300;
+  letter-spacing: 1.5px;
+}
+
+.showcase-img {
+  width: 100px;
+}
+
+.small-img {
+  width: 106px;
+}
+
+.big-img {
+  width: 87px;
+}
+
+.blue-big {
+  width: 99.9px;
+}
+
+button .imgs {
+  width: 18px;
+}
+
+.cart-add-btn {
+  position: absolute;
+  width: 45px;
+  padding: 5px 5px;
+  display: flex;
+  bottom: -10px;
+  right: -15px;
+  justify-content: center;
+  align-items: center;
+  border: solid var(--gray);
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: var(--acsent);
+  filter: drop-shadow(0px 0px 10px var(--acsent));
+}
+
+.cart-add-btn:hover {
+  scale: 1.08;
+}
+
+.product-desc span {
+  font-family: "Gloria Hallelujah", sans-serif;
+  font-size: 18px;
+}
+
+body {
+  position: relative;
+}
+
+.up-arrow {
+  position: sticky;
+  bottom: 1rem;
+  left: 5px;
+  transform: translateX(-20px);
+  background-color: rgba(233, 199, 171, 0.501);
+  backdrop-filter: blur(5px);
+  width: 40px;
+  border: none 1px var(--gray);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 6px;
+  cursor: pointer;
+}
+
+.up-arrow:hover {
+  scale: 1.08;
+}
+
+.up-arrow img {
+  width: 80%;
+}
+
+#about h1 {
+  text-align: center;
+  margin: 8px 0;
+  color: var(--acsent);
+}
+
+.FQA {
+  padding-bottom: 20px;
+  color: var(--acsent);
+}
+
+.question-btn {
+  color: var(--white);
+  padding: 0px 8px;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 19px;
+  box-shadow: 0 0 3px;
+}
+
+.questions {
+  background: var(--black);
+  border-radius: 11px;
+  box-shadow: 0 0 1px;
+  padding: 20px;
+  margin-bottom: 2rem;
+}
+
+.questions:hover {
+  background-color: var(--polish);
+  color: var(--black);
+}
+
+.questions:hover .question-btn {
+  background-color: var(--black);
+}
+
+.questions:hover .question-title p {
+  color: var(--black);
+}
+
+.question-title p:hover {
+  text-decoration: underline;
+}
+
+.question-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: capitalize;
+  padding-bottom: 5px;
+}
+
+.question-title p {
+  margin-bottom: 0;
+  cursor: default;
+  color: var(--polish);
+  text-shadow: 0 0 2.3px var(--acsent);
+}
+
+.question-btn {
+  font-size: 20px;
+  background: transparent;
+  border-color: transparent;
+  cursor: pointer;
+  color: var(--acsent);
+  transition: all 0.3s ease-in-out;
+}
+
+.question-text {
+  transition: all 0.3s ease-in-out;
+}
+
+.question-text p {
+  margin-bottom: 0;
+}
+
+.question-text {
+  display: none;
+  transition: all 0.3s ease-in-out;
+}
+.show-text .question-text {
+  display: block;
+  transition: all 0.3s ease-in-out;
+}
+.minus-icon {
+  display: none;
+}
+.show-text .minus-icon {
+  display: inline;
+}
+.show-text .plus-icon {
+  display: none;
+}
+.show-text .question-title p {
+  display: block;
+}
+
+footer {
+  background-color: var(--black);
+  border-top: solid;
+  width: 88%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 20px;
+  padding: 20px 0;
+}
+
+#contact h3 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+table {
+  width: 350px;
+  text-align: left;
+}
+
+table * {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px var(--white) solid;
+  color: var(--polish);
+}
+
+.dev {
+  text-align: center;
+  border: none;
+  padding-bottom: 1rem;
+  position: relative;
+  color: var(--acsent);
+}
+
+.dev::before {
+  content: "";
+  width: 80px;
+  height: 2px;
+  border-radius: 2px;
+  background-color: var(--white);
+  position: absolute;
+  bottom: 0.7rem;
+  left: 8.3rem;
+}
+
+th {
+  color: var(--acsent);
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 30px;
+}
+
+.holder-two {
+  padding: 0px 20px;
+}
+
+.footer-container * {
+  font-size: 18px;
+  font-family: "Patrick Hand", sans-serif;
+}
+
+.footer-ul {
+  list-style: none;
+  text-align: left;
+}
+
+.footer-ul li {
+  text-align: left;
+}
+
+.footer-ul li a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+.footer-ul li a:hover {
+  color: var(--acsent);
+}
+
+.fa-twitter,
+.fa-linkedin,
+.fa-facebook {
+  color: rgb(33, 125, 230);
+  font-size: 18px;
+}
+
+.fa-instagram {
+  color: var(--polish);
+}
+
+.footer-ul li a i {
+  padding-right: 1.2rem;
+}
+
+.footer-holder h5 {
+  margin-bottom: 1rem;
+}
+
+.copy-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: solid;
+  padding-top: 17px;
+  margin-top: 25px;
+  flex-wrap: wrap;
+  gap: 20px;
+  color: var(--white);
+}
+
+/* change the shoping section */
+@media (max-width: 611px) {
+  .holder {
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .intro {
+    font-size: 20px;
+    margin-bottom: 1rem;
+  }
+  .home-hero {
+    border-radius: 15px;
+    width: 250px;
+    padding: 20px;
+    background: linear-gradient(180deg, var(--black) 50%, var(--acsent));
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 0 10px var(--gray);
+  }
+  .popup.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .brand {
+    font-size: 3rem;
+    margin-left: 5rem;
+  }
+  .footer-ul li {
+    text-align: left;
+    line-height: 2;
+  }
+}
+
+@media (max-width: 610px) {
+  .footer-ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+  .footer-ul li a i {
+    padding-right: 10px;
+  }
+  .holder-two h5 {
+    margin-bottom: 0.4rem;
+    text-align: center;
+  }
+  .footer-ul li {
+    padding-right: 10px;
+  }
+}
+
+@media (max-width: 558px) {
+  .burger {
+    display: flex;
+  }
+  nav {
+    padding: 10px;
+    flex-direction: column;
+    backdrop-filter: blur(10px);
+  }
+  .ul {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .ul.active {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: flex-end;
+  }
+  .ul li {
+    width: 100%;
+  }
+  .ul-el {
+    flex-direction: column;
+  }
+
+  .footer-ul {
+    line-height: 2;
+  }
+  .footer-list {
+    /* flex: 0 0 0; */
+    width: 109px;
+  }
+}
+
+@media (max-width: 568px) {
+  .footer-ul {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  .footer-list {
+    /* flex: 0 0 0; */
+    width: 109px;
+  }
+  .copy-right small {
+    min-width: 100px;
+  }
+  .copy-right {
+    gap: 10px;
+  }
+  .year {
+    margin: 0;
+  }
+  .popup-container {
+    /* padding: 10px; */
+    font-size: 14px;
+  }
+  .popup-container .btn-clear {
+    bottom: 0.2rem;
+  }
+}
+
+@media (max-width: 380px) {
+  table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  tbody {
+    border: none;
+  }
+  .intro {
+    font-size: 16px;
+  }
+  .brand {
+    font-size: 2.5rem;
+    margin-left: 3.9rem;
+  }
+  .up-arrow {
+    margin-left: 0.4rem;
+  }
+  .para-one {
+    font-size: 14px;
+  }
+  .row {
+    width: 88%;
+  }
+  .dev::before {
+    left: 4.7rem;
+  }
+}
+
+/* change the shoping ends here */
+@media (prefers-color-scheme: dark) {
+  /* when dark */
+  body {
+    background-color: var(--black);
+    color: var(--white);
+  }
+}
+@media (prefers-color-scheme: light) {
+  /* when light */
+  body {
+    background-color: var(--white);
+    color: var(--black);
+  }
+  nav {
+    border-bottom: solid var(--black) 2px;
+    background-color: var(--white);
+  }
+  .ul-el li a {
+    color: var(--black);
+    text-shadow: 0 0 1px var(--black);
+  }
+
+  .intro::before,
+  .intro::after {
+    background-color: var(--black);
+  }
+
+  .home-hero {
+    background: linear-gradient(180deg, var(--white) 50%, var(--acsent));
+  }
+  .questions {
+    background: var(--white);
+  }
+  .question-title p {
+    margin-bottom: 0;
+    cursor: default;
+    color: var(--black);
+  }
+  .dev::before {
+    background-color: var(--black);
+  }
+  table * {
+    border: 1px var(--black) solid;
+  }
+  footer {
+    background-color: var(--white);
+  }
+  .footer-ul li a {
+    text-decoration: none;
+    color: var(--black);
+  }
+  .copy-right {
+    color: var(--black);
+  }
+  table * {
+    border: 1px var(--black) solid;
+    color: var(--polish);
+    text-shadow: 0 0 0.4px black;
+  }
+  .popup-handler {
+    text-shadow: 0 0 10px var(--white);
+  }
+  .popup-container {
+    background-color: var(--white);
+    box-shadow: 0 0 10px var(--black);
+  }
+  .popup-handler .btn-close {
+    background-color: var(--gray);
+    filter: drop-shadow(0px 0px 6px var(--black));
+    text-shadow: 0 0 10px var(--white);
+  }
+  .cool-hang::after {
+    background-color: var(--black);
+  }
+
+  .cool-hang::before {
+    background-color: var(--black);
+  }
+  th {
+    color: var(--acsent);
+  }
+}
+/* 
+.welcome {
+  opacity: 0.5;
+  transform: scale(0.8) translate(20px);
+  transition: all 0.3s ease-in-out;
+}
+
+.appear-smoothly {
+  opacity: 1;
+  transform: scale(1) translate(0px);
+} */

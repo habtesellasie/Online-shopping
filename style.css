@@ -8,7 +8,7 @@
   font-family: 'Chewy', sans-serif;
   font-family: 'Gloria Hallelujah', sans-serif;
   font-family: 'Patrick Hand', sans-serif;
-  popup
+  ul-el
 
 */
 
@@ -935,8 +935,8 @@ th {
     color: var(--black);
   }
   nav {
-    border-bottom: solid var(--black) 2px;
-    background-color: var(--white);
+    border-bottom: solid var(--polish) 2px;
+    background-color: rgba(255, 255, 255, 0.5);
   }
   .ul-el li a {
     color: var(--black);

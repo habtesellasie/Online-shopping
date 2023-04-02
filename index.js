@@ -13,9 +13,18 @@ const questions = document.querySelectorAll(".questions");
 const questAsk = document.querySelectorAll(".question-title p");
 const text = document.querySelector(".brand-ani");
 let counter = parseInt(localStorage.getItem("counter")) || 0;
+const year = document.querySelector(".year");
 
 const strText = text.textContent;
 const splitText = strText.split("");
+
+let date = new Date();
+let fullYear = date.getFullYear();
+let month = date.getMonth();
+let day = date.getDay();
+year.textContent = `   ${day < 10 ? "0" + day : day}/${
+  month < 10 ? "0" + month : month
+}/${fullYear} `;
 
 text.textContent = "";
 for (let i = 0; i < splitText.length; i++) {

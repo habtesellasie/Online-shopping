@@ -8,7 +8,7 @@
   font-family: 'Chewy', sans-serif;
   font-family: 'Gloria Hallelujah', sans-serif;
   font-family: 'Patrick Hand', sans-serif;
-  
+
 
 */
 
@@ -48,7 +48,7 @@ html {
 body {
   background: var(--black);
   color: var(--white);
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 header {

@@ -8,7 +8,7 @@
   font-family: 'Chewy', sans-serif;
   font-family: 'Gloria Hallelujah', sans-serif;
   font-family: 'Patrick Hand', sans-serif;
-
+parag
 
 */
 
@@ -57,6 +57,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: baseline;
+  position: relative;
 }
 
 nav {
@@ -390,7 +391,7 @@ main {
 
 .welcome-first .parag {
   flex: 2 1 0;
-
+  font-size: 23px;
   letter-spacing: 2.2px;
   font-family: "Patrick Hand", sans-serif;
 }
@@ -455,16 +456,6 @@ main {
   box-shadow: 0 0 10px var(--gray);
   flex: 1 1 0;
   min-width: 170px;
-}
-
-/* .home-hero:hover {
-  box-shadow: 0 0 10px var(--acsent);
-  scale: 1.03;
-} */
-
-.home-hero:hover::before .welcome:hover {
-  scale: 1.03;
-  box-shadow: 0 0 10px var(--polish);
 }
 
 .product-desc {
@@ -575,23 +566,6 @@ body {
   box-shadow: 0 0 1px;
   padding: 20px;
   margin-bottom: 2rem;
-}
-
-.questions:hover {
-  background-color: var(--polish);
-  color: var(--black);
-}
-
-.questions:hover .question-btn {
-  background-color: var(--black);
-}
-
-.questions:hover .question-title p {
-  color: var(--black);
-}
-
-.question-title p:hover {
-  text-decoration: underline;
 }
 
 .question-title {
@@ -762,6 +736,74 @@ th {
   gap: 20px;
   color: var(--white);
 }
+.footer-ul li a:hover {
+  color: var(--acsent);
+}
+.home-hero:hover {
+  box-shadow: 0 0 10px var(--acsent);
+  scale: 1.03;
+}
+td:hover,
+th:hover {
+  box-shadow: 0 0 10px var(--acsent);
+  scale: 1.03;
+  cursor: default;
+}
+.dev:hover {
+  box-shadow: none;
+}
+
+.welcome:hover {
+  cursor: default;
+  scale: 1.03;
+  box-shadow: 0 0 10px var(--polish);
+}
+.cart-add-btn:hover {
+  scale: 0.95;
+}
+
+.questions:hover {
+  background-color: var(--polish);
+  color: var(--black);
+  scale: 1.016;
+}
+
+.questions:hover .question-btn {
+  background-color: var(--black);
+}
+
+.questions:hover .question-title p {
+  color: var(--black);
+}
+.home-img:hover {
+  scale: 0.94;
+  box-shadow: 0 0 20px var(--acsent);
+}
+.btn-clear:hover,
+.btn-close:hover {
+  background-color: var(--acsent);
+  scale: 0.9;
+}
+.burger:hover {
+  scale: 0.97;
+  background-color: var(--acsent);
+}
+.burger:hover .bar {
+  background-color: var(--black);
+}
+.counting-logo:hover {
+  background-color: var(--polish);
+  border: solid var(--white);
+}
+
+.ul li:hover {
+  background-color: var(--acsent);
+  scale: 1.07;
+  padding: 2px 6px;
+}
+.hokey-logo:hover {
+  color: var(--polish);
+}
 
 /* change the shoping section */
 @media (max-width: 611px) {
@@ -776,6 +818,10 @@ th {
   .intro {
     font-size: 20px;
     margin-bottom: 1rem;
+  }
+  .welcome-first .parag {
+    font-size: 20px;
+    letter-spacing: 1px;
   }
   .home-hero {
     border-radius: 15px;
@@ -892,6 +938,14 @@ th {
 }
 
 @media (max-width: 380px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+  }
   table {
     display: flex;
     justify-content: center;
@@ -902,6 +956,10 @@ th {
   }
   .intro {
     font-size: 16px;
+  }
+  .welcome-first .parag {
+    font-size: 14px;
+    letter-spacing: 1px;
   }
   .brand {
     font-size: 2.5rem;

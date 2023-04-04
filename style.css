@@ -954,6 +954,13 @@ th:hover {
   }
 }
 
+@media (max-width: 405px) {
+  .home-img {
+    padding: 2.5rem;
+    border-radius: 15%;
+  }
+}
+
 @media (max-width: 380px) {
   body {
     display: flex;
@@ -1003,7 +1010,10 @@ th:hover {
     right: 0.3rem;
   }
   .burger {
-    right: 2.5rem;
+    right: 3.5rem;
+  }
+  .hokey-logo {
+    margin-left: 1rem;
   }
 }
 

@@ -1095,6 +1095,7 @@ th:hover {
 } */
 .question-container {
   overflow-x: hidden;
+  padding: 20px;
 }
 
 .welcome {

@@ -954,10 +954,13 @@ th:hover {
   }
 }
 
-@media (max-width: 405px) {
+@media (max-width: 422px) {
   .home-img {
-    padding: 2.5rem;
-    border-radius: 15%;
+    padding: 0 1rem;
+    border-radius: 10%;
+  }
+  .home-img:hover {
+    box-shadow: none;
   }
 }
 

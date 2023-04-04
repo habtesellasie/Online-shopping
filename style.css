@@ -384,7 +384,6 @@ main {
 }
 
 .home-img {
-  width: 45%;
   flex: 2 1 0;
   border-radius: 15px;
 }

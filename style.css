@@ -994,6 +994,17 @@ th:hover {
   .dev::before {
     left: 4.7rem;
   }
+  .counting {
+    position: absolute;
+    top: 0;
+    right: -0.5rem;
+  }
+  .counting-logo {
+    right: 0.3rem;
+  }
+  .burger {
+    right: 2.5rem;
+  }
 }
 
 /* change the shoping ends here */

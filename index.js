@@ -17,8 +17,56 @@ const year = document.querySelector(".year");
 const loader = document.querySelector(".pre-loader");
 
 window.addEventListener("load", function () {
+  loader.style.overflow = "hidden";
   loader.style.display = "none";
 });
+
+const homeHero = document.querySelectorAll(".home-hero");
+const welcomeSec = document.querySelectorAll(".welcome");
+const tableData = document.querySelectorAll("td");
+
+window.addEventListener("scroll", fadeIn);
+
+fadeIn();
+function fadeIn() {
+  let imagePosition = window.innerHeight / 1.17;
+
+  homeHero.forEach((hero) => {
+    const home_hero = hero.getBoundingClientRect().top;
+    if (home_hero < imagePosition) {
+      hero.classList.add("show");
+    } else {
+      hero.classList.remove("show");
+    }
+    welcomeSec.forEach((wel) => {
+      imagePosition = window.innerHeight / 1.3;
+      let welcomeTop = wel.getBoundingClientRect().top;
+      if (welcomeTop < imagePosition) {
+        wel.classList.add("show");
+      } else {
+        wel.classList.remove("show");
+      }
+    });
+    tableData.forEach((data) => {
+      imagePosition = window.innerHeight / 1.15;
+      let dataPos = data.getBoundingClientRect().top;
+      if (dataPos < imagePosition) {
+        data.classList.add("apear");
+      } else {
+        data.classList.remove("apear");
+      }
+    });
+  });
+  questions.forEach((question) => {
+    imagePosition = window.innerHeight / 1.2;
+    let questPosition = question.getBoundingClientRect().top;
+    if (questPosition < imagePosition) {
+      question.classList.add("show");
+    } else {
+      question.classList.remove("show");
+    }
+  });
+}
 
 const strText = text.textContent;
 const splitText = strText.split("");

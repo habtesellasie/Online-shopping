@@ -8,7 +8,7 @@
   font-family: 'Chewy', sans-serif;
   font-family: 'Gloria Hallelujah', sans-serif;
   font-family: 'Patrick Hand', sans-serif;
-  min-width
+  pre
 
 */
 
@@ -141,7 +141,6 @@ nav {
 .ul-el .cart-count {
   border: none;
   margin: 0;
-  position: relative;
 }
 .counting-logo {
   cursor: pointer;
@@ -152,7 +151,7 @@ nav {
   /* change bellow */
   background-color: rgb(51, 162, 226);
   border-radius: 10px;
-  position: fixed;
+  position: absolute;
   top: 10px;
   right: 10px;
   padding: 5px 5px;
@@ -384,6 +383,7 @@ main {
 }
 
 .home-img {
+  width: 400px;
   flex: 2 1 0;
   border-radius: 15px;
 }
@@ -744,6 +744,8 @@ th {
   width: 100%;
   position: fixed;
   z-index: 100;
+  top: 0;
+  left: 0;
 }
 
 .footer-ul li a:hover {
@@ -1091,3 +1093,51 @@ th:hover {
   opacity: 1;
   transform: scale(1) translate(0px);
 } */
+.question-container {
+  overflow-x: hidden;
+}
+
+.welcome {
+  opacity: 0.1;
+  transform: scale(0.8);
+  transition: all 0.3s ease-in-out;
+}
+
+td {
+  opacity: 0;
+  transform: translateY(40%);
+  transition: all 0.3s ease-in-out;
+}
+
+td.apear {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.home-hero {
+  opacity: 0.1;
+  transform: scale(0.8);
+  transition: all 0.3s ease-in-out;
+}
+.questions {
+  opacity: 0.3;
+}
+
+.questions:nth-of-type(even) {
+  transform: translateX(-400%);
+  transition: all 0.6s ease-in-out;
+}
+.questions:nth-of-type(odd) {
+  transform: translateX(400%);
+  transition: all 0.6s ease-in-out;
+}
+
+.questions.show {
+  transform: translateX(0);
+}
+
+.show {
+  opacity: 1;
+  transform: scale(1);
+}
+/* scroll event ends here */

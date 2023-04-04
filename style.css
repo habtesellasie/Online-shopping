@@ -1004,6 +1004,9 @@ th:hover {
   .dev::before {
     left: 4.7rem;
   }
+  .cart-count {
+    position: relative;
+  }
   .counting {
     position: absolute;
     top: 0;

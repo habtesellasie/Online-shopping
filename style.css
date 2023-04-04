@@ -1046,7 +1046,7 @@ th:hover {
     color: var(--black);
   }
   table * {
-    border: 1px var(--black) solid;
+    /* border: 1px var(--black) solid; */
     color: var(--polish);
     text-shadow: 0 0 0.4px black;
   }
@@ -1071,6 +1071,9 @@ th:hover {
   }
   th {
     color: var(--acsent);
+  }
+  tbody {
+    border: none;
   }
 }
 /* 

@@ -1009,11 +1009,12 @@ th:hover {
   }
   .counting {
     position: absolute;
-    top: 0;
-    right: 5rem;
+    top: -2.2rem;
+    right: -9.7rem;
   }
   .counting-logo {
-    right: 0.3rem;
+    top: -1.6rem;
+    right: -9rem;
   }
   .burger {
     right: 3.8rem;

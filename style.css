@@ -1010,7 +1010,7 @@ th:hover {
   .counting {
     position: absolute;
     top: 0;
-    right: -0.5rem;
+    right: 5rem;
   }
   .counting-logo {
     right: 0.3rem;

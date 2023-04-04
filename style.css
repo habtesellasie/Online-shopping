@@ -8,7 +8,7 @@
   font-family: 'Chewy', sans-serif;
   font-family: 'Gloria Hallelujah', sans-serif;
   font-family: 'Patrick Hand', sans-serif;
-  pre
+  th
 
 */
 
@@ -667,7 +667,7 @@ table * {
   left: 8.3rem;
 }
 
-th {
+.th {
   color: var(--acsent);
 }
 
@@ -756,7 +756,7 @@ th {
   scale: 1.03;
 }
 td:hover,
-th:hover {
+.th:hover {
   box-shadow: 0 0 10px var(--acsent);
   scale: 1.03;
   cursor: default;
@@ -956,11 +956,13 @@ th:hover {
 
 @media (max-width: 422px) {
   .home-img {
-    padding: 0 1rem;
-    border-radius: 10%;
+    scale: 0.8;
+    padding: 0;
+    margin: 0;
   }
   .home-img:hover {
     box-shadow: none;
+    scale: 0.7;
   }
 }
 
@@ -1014,7 +1016,7 @@ th:hover {
   }
   .counting-logo {
     top: -1.6rem;
-    right: -9rem;
+    right: -9.5rem;
   }
   .burger {
     right: 3.8rem;
@@ -1103,7 +1105,7 @@ th:hover {
   .cool-hang::before {
     background-color: var(--black);
   }
-  th {
+  .th {
     color: var(--acsent);
   }
   tbody {

@@ -736,6 +736,16 @@ th {
   gap: 20px;
   color: var(--white);
 }
+
+.pre-loader {
+  background: var(--black) url("shopping-loader.gif") no-repeat center;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+}
+
 .footer-ul li a:hover {
   color: var(--acsent);
 }

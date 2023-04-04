@@ -14,6 +14,11 @@ const questAsk = document.querySelectorAll(".question-title p");
 const text = document.querySelector(".brand-ani");
 let counter = parseInt(localStorage.getItem("counter")) || 0;
 const year = document.querySelector(".year");
+const loader = document.querySelector(".pre-loader");
+
+window.addEventListener("load", function () {
+  loader.style.display = "none";
+});
 
 const strText = text.textContent;
 const splitText = strText.split("");

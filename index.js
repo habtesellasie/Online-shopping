@@ -21,6 +21,10 @@ window.addEventListener("load", function () {
   loader.style.display = "none";
 });
 
+menu.addEventListener("click", () => {
+  links.classList.toggle("active");
+});
+
 const homeHero = document.querySelectorAll(".home-hero");
 const welcomeSec = document.querySelectorAll(".welcome");
 const tableData = document.querySelectorAll("td");
@@ -30,6 +34,11 @@ window.addEventListener("scroll", fadeIn);
 fadeIn();
 function fadeIn() {
   let imagePosition = window.innerHeight / 1.17;
+  if (links.classList.contains("active")) {
+    setTimeout(() => {
+      links.classList.remove("active");
+    }, 1000);
+  }
 
   homeHero.forEach((hero) => {
     const home_hero = hero.getBoundingClientRect().top;
@@ -136,10 +145,6 @@ addToCart.forEach((add) => {
   });
 });
 countNum.textContent = counter;
-
-menu.addEventListener("click", () => {
-  links.classList.toggle("active");
-});
 
 // let lastScroll = 0;
 // window.addEventListener("scroll", () => {

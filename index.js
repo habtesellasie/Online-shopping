@@ -15,6 +15,7 @@ const text = document.querySelector(".brand-ani");
 let counter = parseInt(localStorage.getItem("counter")) || 0;
 const year = document.querySelector(".year");
 const loader = document.querySelector(".pre-loader");
+const nav = document.querySelector("nav");
 
 window.addEventListener("load", function () {
   loader.style.overflow = "hidden";

@@ -8,7 +8,7 @@
   font-family: 'Chewy', sans-serif;
   font-family: 'Gloria Hallelujah', sans-serif;
   font-family: 'Patrick Hand', sans-serif;
-  active
+  .ul
 
 */
 
@@ -73,6 +73,7 @@ nav {
 .ul-el,
 .ul {
   display: flex;
+  height: auto;
   justify-content: center;
   align-items: center;
   gap: 20px;
@@ -822,6 +823,11 @@ td:hover,
   .home-hero {
     min-width: 250px;
   }
+  .welcome {
+    min-width: 450px;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 /* change the shoping section */
@@ -893,21 +899,24 @@ td:hover,
   .burger {
     display: flex;
   }
+
   nav {
     padding: 10px;
     flex-direction: column;
+    height: auto;
   }
   .ul {
-    display: none;
+    height: 10px;
     justify-content: center;
+    transform: translateY(-200px);
+    text-align: center;
     align-items: center;
-    justify-content: flex-end;
+    flex-direction: column;
+    transition: all 0.2s ease-in;
   }
   .ul.active {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: flex-end;
+    height: auto;
+    transform: translateY(0%);
     transition: all 0.3s ease-out;
   }
   .ul li {
@@ -1114,6 +1123,7 @@ td:hover,
     border: none;
   }
 }
+
 /* 
 .welcome {
   opacity: 0.5;
@@ -1131,8 +1141,8 @@ td:hover,
 }
 
 .welcome {
-  opacity: 0.1;
-  transform: scale(0.8);
+  opacity: 0;
+  transform: translateY(8%);
   transition: all 0.3s ease-in-out;
 }
 
@@ -1148,21 +1158,18 @@ td.apear {
 }
 
 .home-hero {
-  opacity: 0.1;
-  transform: scale(0.8);
+  opacity: 0;
+  transform: scale(0.9) translateY(40px);
   transition: all 0.3s ease-in-out;
-}
-.questions {
-  opacity: 0.3;
 }
 
 .questions:nth-of-type(even) {
-  transform: translateX(-400%);
-  transition: all 0.6s ease-in-out;
+  transform: translateX(-1300px);
+  transition: transform 0.4s ease-out;
 }
 .questions:nth-of-type(odd) {
-  transform: translateX(400%);
-  transition: all 0.6s ease-in-out;
+  transform: translateX(1300px);
+  transition: transform 0.4s ease-out;
 }
 
 .questions.show {
@@ -1172,5 +1179,7 @@ td.apear {
 .show {
   opacity: 1;
   transform: scale(1);
+  opacity: 1;
+  transform: translateY(0);
 }
 /* scroll event ends here */

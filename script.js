@@ -58,7 +58,7 @@ function fadeIn() {
       }
     });
     tableData.forEach((data) => {
-      imagePosition = window.innerHeight / 1.15;
+      imagePosition = window.innerHeight / 1.1;
       let dataPos = data.getBoundingClientRect().top;
       if (dataPos < imagePosition) {
         data.classList.add("apear");

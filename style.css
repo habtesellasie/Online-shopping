@@ -687,7 +687,7 @@ table * {
 
 .footer-container * {
   font-size: 18px;
-  font-family: "Patrick Hand", sans-serif;
+  font-family: sans-serif;
 }
 
 .footer-ul {
@@ -702,6 +702,7 @@ table * {
 .footer-ul li a {
   text-decoration: none;
   color: var(--white);
+  font-family: "Patrick Hand", serif;
 }
 
 .footer-ul li a:hover {
@@ -930,21 +931,23 @@ td:hover,
     line-height: 2;
   }
   .footer-list {
-    /* flex: 0 0 0; */
     width: 109px;
+  }
+}
+@media (max-width: 610px) {
+  .footer-list {
+    width: 70px;
   }
 }
 
 @media (max-width: 568px) {
   .footer-ul {
     display: flex;
-    /* flex-direction: column; */
     justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
   }
   .footer-list {
-    /* flex: 0 0 0; */
     width: 109px;
   }
   .copy-right small {
@@ -957,7 +960,6 @@ td:hover,
     margin: 0;
   }
   .popup-container {
-    /* padding: 10px; */
     font-size: 14px;
   }
   .popup-container .btn-clear {
@@ -1015,7 +1017,7 @@ td:hover,
     width: 88%;
   }
   .dev::before {
-    left: 4.7rem;
+    left: 6rem;
   }
   .cart-count {
     position: relative;
@@ -1026,14 +1028,17 @@ td:hover,
     right: -9.7rem;
   }
   .counting-logo {
-    top: -1.6rem;
-    right: -9.5rem;
+    top: -2.2rem;
+    right: -8.9rem;
   }
   .burger {
-    right: 3.8rem;
+    right: 3rem;
   }
   .hokey-logo {
-    margin-left: 1rem;
+    margin-left: 0.4rem;
+  }
+  .btn-close {
+    right: -3rem;
   }
 }
 

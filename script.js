@@ -85,9 +85,7 @@ let date = new Date();
 let fullYear = date.getFullYear();
 let month = date.getMonth();
 let day = date.getDay();
-year.textContent = `   ${day < 10 ? "0" + day : day}/${
-  month < 10 ? "0" + month : month
-}/${fullYear} `;
+year.textContent = ` ${fullYear}`;
 
 text.textContent = "";
 for (let i = 0; i < splitText.length; i++) {

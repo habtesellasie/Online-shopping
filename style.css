@@ -68,6 +68,7 @@ nav {
   backdrop-filter: blur(10px);
   z-index: 99;
   transition: all 0.3s ease-in;
+  user-select: none;
 }
 
 .ul-el,
@@ -458,6 +459,7 @@ main {
   flex: 1 1 0;
   min-width: 170px;
   max-width: 470px;
+  user-select: none;
 }
 
 .product-desc {
@@ -683,6 +685,7 @@ table * {
 
 .holder-two {
   padding: 0px 20px;
+  user-select: none;
 }
 
 .footer-container * {

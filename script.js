@@ -145,6 +145,8 @@ addToCart.forEach((add) => {
 });
 countNum.textContent = counter;
 
+// what a change
+
 // let lastScroll = 0;
 // window.addEventListener("scroll", () => {
 //   const currentScroll = window.pageYOffset;

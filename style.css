@@ -8,7 +8,6 @@
   font-family: 'Chewy', sans-serif;
   font-family: 'Gloria Hallelujah', sans-serif;
   font-family: 'Patrick Hand', sans-serif;
-  .ul
 
 */
 
@@ -16,7 +15,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: "Allerta Stencil", sans-serif;
   transition: all 0.1s cubic-bezier(0.175, 0.885, 0.32, 0.7);
 }
 
@@ -51,8 +50,9 @@ body {
   overflow-x: hidden;
 }
 
-nav {
+.nav {
   position: fixed;
+  top: 0;
   width: 100%;
   border-bottom: solid var(--polish) 2px;
   background-color: rgba(33, 33, 33, 0.9);
@@ -110,7 +110,7 @@ nav {
   position: fixed;
   z-index: 99;
   top: 0.6rem;
-  right: 3rem;
+  right: 4rem;
   display: none;
   flex-direction: column;
   justify-content: space-evenly;
@@ -140,19 +140,15 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* change bellow */
   background-color: rgb(51, 162, 226);
   border-radius: 10px;
-  /* position: absolute;
-  top: 10px;
-  right: 10px;*/
   padding: 5px 5px;
 }
 
 .counting {
-  /* position: fixed;
-  top: 4px;
-  right: -1px; */
+  position: absolute;
+  top: -7px;
+  right: -5px;
   border: none;
   outline: none;
   color: red;
@@ -169,44 +165,31 @@ nav {
   margin: 0;
 }
 
-.popup {
-  display: none;
-  position: absolute;
-  top: 5rem;
-  right: -0.6rem;
-  min-width: 250px;
-  z-index: 99;
+.hokey-logo {
+  border: solid;
+  padding: 5px 10px;
 }
 
 .cart-count {
   position: relative;
 }
-.counting {
-  /* position: absolute;
-    top: -2.2rem;
-    right: -9.7rem; */
-}
 
-.popup-container {
-  background: url("exclamation-mark.png");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: var(--black);
-  position: relative;
+/* shop.html */
+.body {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 15px 20px;
-  border-radius: 15px;
-  width: 350px;
-  box-shadow: 0 0 10px var(--white);
+  gap: 35px;
 }
 
-.popup-handler {
+.contain {
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 550px;
   backdrop-filter: blur(5px);
-  text-shadow: 0 0 10px var(--black);
+  box-shadow: 0 0 10px var(--black);
+  border: solid var(--acsent);
 }
 
 .btn-close {
@@ -222,42 +205,49 @@ nav {
   filter: drop-shadow(0px 0px 6px var(--white));
 }
 
-.btn-clear {
+.count {
+  text-decoration: underline;
+  color: red;
+  text-shadow: -1px 1px 10px var(--acsent);
+  font-size: 29px;
+}
+
+.exc {
+  position: relative;
+}
+
+.excla {
   position: absolute;
-  right: 1.2rem;
-  bottom: 0.5rem;
-  border: solid 2px var(--acsent);
-  border-radius: 5px;
-  background-color: var(--white);
-  color: rgb(165, 5, 5);
-  padding: 5px;
+  width: 10%;
+  top: -0.6000000000000001rem;
+  transform: rotate(30deg);
+  right: -0.6rem;
+}
+
+.warning-handler {
+  text-align: center;
+  font-size: 23px;
+}
+
+.go-back {
+  display: block;
+  margin-top: 20px;
+  border: solid var(--polish);
+  background-color: var(--acsent);
+  padding: 5px 0px;
+  width: 100%;
   cursor: pointer;
-  filter: drop-shadow(0px 0px 6px var(--black));
+  text-align: center;
+  text-decoration: none;
+  color: var(--black);
 }
 
-.popup.active {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.go-back:hover {
+  background-color: var(--polish);
+  color: var(acsent);
 }
 
-.popup h3 {
-  font-family: "Patrick Hand", sans-serif;
-  border: solid var(--acsent) 2.3px;
-  border-radius: 10px;
-  padding: 5px;
-}
-
-.popup p {
-  font-family: "Gloria Hallelujah", sans-serif;
-  font-weight: bolder;
-  padding: 5px 10px;
-  border-bottom: solid;
-  min-width: 300px;
-  max-width: 350px;
-}
-
-/* popup ends */
+/* shop.html */
 
 /* apear on scroll down only */
 .scroll-down nav {
@@ -270,7 +260,7 @@ nav {
 
 header {
   width: 88%;
-  margin: 0 auto;
+  margin: 5rem auto 0 auto;
 }
 
 main {
@@ -380,8 +370,6 @@ main {
 .row {
   position: relative;
   flex: 1 1 0;
-  border: solid red;
-  /* max-width: 600px; */
 }
 
 .home-img {
@@ -648,6 +636,7 @@ table * {
   border-radius: 5px;
   border: 1px var(--white) solid;
   color: var(--polish);
+  font-family: "Patrick Hand", serif;
 }
 
 .dev {
@@ -795,11 +784,7 @@ td:hover,
   scale: 0.94;
   box-shadow: 0 0 20px var(--acsent);
 }
-.btn-clear:hover,
-.btn-close:hover {
-  background-color: var(--acsent);
-  scale: 0.9;
-}
+
 .burger:hover {
   scale: 0.97;
   background-color: var(--acsent);
@@ -831,7 +816,7 @@ td:hover,
     align-items: center;
   }
 }
-@media (max-width: 846px) {
+@media (max-width: 875px) {
   .home-img {
     padding: 0;
     margin: 0;
@@ -903,16 +888,21 @@ td:hover,
   }
 }
 
+nav {
+  padding: 5px;
+}
+
 @media (max-width: 558px) {
   .burger {
     display: flex;
   }
 
   nav {
-    padding: 10px;
+    /* padding: 10px; */
     flex-direction: column;
-    height: auto;
+    /* height: auto; */
   }
+
   .ul {
     height: 10px;
     justify-content: center;
@@ -927,6 +917,23 @@ td:hover,
     transform: translateY(0%);
     transition: all 0.3s ease-out;
   }
+
+  nav {
+    position: relative;
+  }
+
+  .cart-count {
+    position: absolute;
+    right: 1.6rem;
+    top: 0.54rem;
+  }
+
+  .counting {
+    position: absolute;
+    top: -0.4rem;
+    right: -0.4rem;
+  }
+
   .ul li {
     width: 100%;
   }
@@ -968,9 +975,6 @@ td:hover,
   }
   .popup-container {
     font-size: 14px;
-  }
-  .popup-container .btn-clear {
-    bottom: 0.2rem;
   }
 }
 
@@ -1036,7 +1040,7 @@ td:hover,
     right: -8.9rem; */
   }
   .burger {
-    right: 3rem;
+    /* right: 3rem; */
   }
   .hokey-logo {
     margin-left: 0.4rem;
@@ -1055,6 +1059,10 @@ td:hover,
   }
 }
 @media (prefers-color-scheme: light) {
+  .ul-el li a {
+    color: var(--black);
+    text-shadow: 0 0 1px var(--white);
+  }
   /* when light */
   body {
     background-color: var(--white);
@@ -1065,8 +1073,8 @@ td:hover,
     background-color: rgba(255, 255, 255, 0.7);
   }
   .ul-el li a {
-    color: var(--black);
-    text-shadow: 0 0 1px var(--black);
+    color: var(--white);
+    text-shadow: 0 0 1px var(--white);
   }
 
   .intro::before,
@@ -1102,7 +1110,6 @@ td:hover,
     color: var(--black);
   }
   table * {
-    /* border: 1px var(--black) solid; */
     color: var(--polish);
     text-shadow: 0 0 0.4px black;
   }
@@ -1159,6 +1166,10 @@ td {
   opacity: 0;
   transform: translateY(40%);
   transition: all 0.3s ease-in-out;
+}
+
+table tbody tr td {
+  font-family: "Patrick Hand", serif;
 }
 
 td.apear {

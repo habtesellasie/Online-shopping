@@ -12,10 +12,10 @@ const year = document.querySelector(".year");
 const loader = document.querySelector(".pre-loader");
 const nav = document.querySelector("nav");
 
-// window.addEventListener("load", function () {
-//   loader.style.overflow = "hidden";
-//   loader.style.display = "none";
-// });
+window.addEventListener("load", function () {
+  loader.style.overflow = "hidden";
+  loader.style.display = "none";
+});
 
 const countNum = document.querySelector(".counting");
 const addToCart = document.querySelectorAll(".cart-add-btn");

@@ -2,25 +2,35 @@ const menu = document.querySelector(".burger");
 const links = document.querySelector(".ul");
 const bars = document.querySelectorAll(".bar");
 const body = document.body;
-const addToCart = document.querySelectorAll(".cart-add-btn");
-const countNum = document.querySelector(".counting");
-const popup = document.querySelector(".popup");
-const cartCount = document.querySelector(".cart-count");
-const btnClear = document.querySelector(".btn-clear");
 const btnClose = document.querySelector(".btn-close");
 const main = document.querySelector("main");
 const questions = document.querySelectorAll(".questions");
 const questAsk = document.querySelectorAll(".question-title p");
 const text = document.querySelector(".brand-ani");
-let counter = parseInt(localStorage.getItem("counter")) || 0;
+
 const year = document.querySelector(".year");
 const loader = document.querySelector(".pre-loader");
 const nav = document.querySelector("nav");
 
-window.addEventListener("load", function () {
-  loader.style.overflow = "hidden";
-  loader.style.display = "none";
+// window.addEventListener("load", function () {
+//   loader.style.overflow = "hidden";
+//   loader.style.display = "none";
+// });
+
+const countNum = document.querySelector(".counting");
+const addToCart = document.querySelectorAll(".cart-add-btn");
+let counter = parseInt(localStorage.getItem("counter")) || 0;
+
+let countFine = localStorage.getItem("countFine", "count");
+
+addToCart.forEach((add) => {
+  add.addEventListener("click", () => {
+    counter++;
+    countNum.textContent = counter;
+    localStorage.setItem("counter", counter.toString());
+  });
 });
+countNum.textContent = counter;
 
 menu.addEventListener("click", () => {
   links.classList.toggle("active");
@@ -120,30 +130,6 @@ questions.forEach((question) => {
     question.classList.toggle("show-text");
   });
 });
-
-cartCount.addEventListener("click", () => {
-  popup.classList.toggle("active");
-});
-let countFine = localStorage.getItem("countFine", "count");
-
-btnClear.addEventListener("click", () => {
-  counter = 0;
-  countNum.textContent = counter;
-  localStorage.setItem("counter", counter.toString());
-});
-
-btnClose.addEventListener("click", () => {
-  popup.classList.remove("active");
-});
-
-addToCart.forEach((add) => {
-  add.addEventListener("click", () => {
-    counter++;
-    countNum.textContent = counter;
-    localStorage.setItem("counter", counter.toString());
-  });
-});
-countNum.textContent = counter;
 
 // what a change
 

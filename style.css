@@ -741,6 +741,18 @@ table * {
   left: 0;
 }
 
+.load-it {
+  background: var(--black) url("shopping-loader.gif") no-repeat center;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
 .footer-ul li a:hover {
   color: var(--acsent);
 }
@@ -1051,13 +1063,6 @@ nav {
     left: 6rem;
   }
 
-  .counting-logo {
-    /* top: -2.2rem;
-    right: -8.9rem; */
-  }
-  .burger {
-    /* right: 3rem; */
-  }
   .hokey-logo {
     margin-left: 0.4rem;
   }

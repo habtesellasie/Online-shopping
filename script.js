@@ -15,6 +15,31 @@ const nav = document.querySelector("nav");
 window.addEventListener("load", function () {
   loader.style.overflow = "hidden";
   loader.style.display = "none";
+
+  const strText = text.textContent;
+  const splitText = strText.split("");
+
+  text.textContent = "";
+  for (let i = 0; i < splitText.length; i++) {
+    text.innerHTML += "<span class='span'>" + splitText[i] + "</span>";
+  }
+
+  let char = 0;
+  let timer = setInterval(onTick, 100);
+
+  function onTick() {
+    const span = text.querySelectorAll("span")[char];
+    span.classList.add("fade");
+    char++;
+    if (char === splitText.length) {
+      complete();
+      return;
+    }
+  }
+  function complete() {
+    clearInterval(timer);
+    timer = null;
+  }
 });
 
 const countNum = document.querySelector(".counting");
@@ -88,36 +113,11 @@ function fadeIn() {
   });
 }
 
-const strText = text.textContent;
-const splitText = strText.split("");
-
 let date = new Date();
 let fullYear = date.getFullYear();
 let month = date.getMonth();
 let day = date.getDay();
 year.textContent = ` ${fullYear}`;
-
-text.textContent = "";
-for (let i = 0; i < splitText.length; i++) {
-  text.innerHTML += "<span class='span'>" + splitText[i] + "</span>";
-}
-
-let char = 0;
-let timer = setInterval(onTick, 1);
-
-function onTick() {
-  const span = text.querySelectorAll("span")[char];
-  span.classList.add("fade");
-  char++;
-  if (char === splitText.length) {
-    complete();
-    return;
-  }
-}
-function complete() {
-  clearInterval(timer);
-  timer = null;
-}
 
 questions.forEach((question) => {
   const btn = question.querySelector(".question-btn");

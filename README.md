@@ -21,8 +21,5 @@ Contributing
 We welcome contributions from anyone who is interested in helping to improve our website. If you have any suggestions, bug reports, or feature requests, 
 please feel free to contact us or submit a pull request on our GitHub repository.
 
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
-
 Contact
 If you have any questions or concerns about our website, please feel free to contact us at https://twitter.com/Havecodesoft

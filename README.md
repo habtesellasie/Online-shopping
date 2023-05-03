@@ -2,7 +2,7 @@
 This is a group assignment
 My Online Shopping Website
 Welcome to My Online Shopping Website, your one-stop-shop for all your fashion needs! 
-Our website offers a wide range of clothing items, from stylish tops and dresses to comfortable jeans and jackets. 
+Our website offers a wide range of clothing items, from stylish tops and comfortable jackets. 
 Our collection includes items for all occasions, from casual wear to formal events, 
 and we constantly update our inventory to ensure you stay ahead of the fashion curve.
 
@@ -14,8 +14,7 @@ Wide range of products: Our collection includes items for all occasions, from ca
 Constantly updated inventory: We regularly update our inventory with the latest fashion trends to ensure that you always stay ahead of the curve.
 Responsive design: Our website is optimized for all devices, so you can shop on your desktop, tablet, or mobile phone.
 Getting Started
-To get started, simply visit our website at https://hokey.netlify.app/ and browse our collection of products. Once you've found an item you like, 
-simply add it to your cart and proceed to checkout. We accept a variety of payment methods, including credit cards, PayPal, and more.
+To get started, simply visit our website at https://hokey.netlify.app/ and browse our collection of products.
 
 Contributing
 We welcome contributions from anyone who is interested in helping to improve our website. If you have any suggestions, bug reports, or feature requests, 

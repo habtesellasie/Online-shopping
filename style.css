@@ -685,6 +685,10 @@ table * {
 .footer-ul {
   list-style: none;
   text-align: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
 .footer-ul li {
@@ -958,6 +962,7 @@ td:hover,
     justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
+    gap: 5px;
   }
   .footer-ul li a i {
     padding-right: 10px;
